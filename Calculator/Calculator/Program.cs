@@ -6,30 +6,28 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            do{
+            Console.WriteLine("This is the calculator");
+
+            do
+            {
                 int num1 = 0;
                 int num2 = 0;
                 int result = 0;
 
-                Console.WriteLine("This is the calculator");
-
-                Console.WriteLine("write number 1: ");
+                Console.Write("write first number: ");
                 num1 = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("write number 2: ");
+                Console.Write("write second numer: ");
                 num2 = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("Enter an option: ");
-                Console.WriteLine("Add");
-                Console.WriteLine("Subtract");
-                Console.WriteLine("Multiply");
-                Console.WriteLine("Divide");
+                Console.Write("Enter the operator (+, -, *, /): ");
 
                 switch (Console.ReadLine())
                 {
                     case "+":
                         result = num1 + num2;
-                        Console.WriteLine($"Your result: {num1} + {num2} =" + result);
+                        Console.WriteLine("{0} + {1} = {2}", num1, num2, (num1 + num2));
+                        //Console.WriteLine($"Your result: {num1} + {num2} =" + result);
                         break;
                     case "-":
                         result = num1 - num2;
@@ -40,15 +38,20 @@ namespace Calculator
                         Console.WriteLine($"Your result: {num1} * {num2} =" + result);
                         break;
                     case "/":
-                        result = num1 / num2;
+                        if (num1 == 0)
+                        {
+                            Console.WriteLine("Can't divide by zero");
+                        }
+                        else
                         Console.WriteLine($"Your result: {num1} / {num2} =" + result);
                         break;
                     default:
-                        Console.WriteLine("valid");
+                        Console.WriteLine("invalid operation");
                         break;
                 }
-                Console.WriteLine("Continue? Y or n:");
-            }while (Console.ReadLine().ToUpper() == "Y");
+                Console.WriteLine("Continue?: Y or N:");
+            }
+            while (Console.ReadLine().ToUpper() == "Y");
 
             Console.ReadKey();
 
