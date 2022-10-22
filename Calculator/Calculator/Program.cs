@@ -8,11 +8,12 @@ namespace Calculator
         {
             Console.WriteLine("This is the calculator");
 
+            int num1 = 0;
+            int num2 = 0;
+            int result = 0;
             do
             {
-                int num1 = 0;
-                int num2 = 0;
-                int result = 0;
+               
 
                 Console.Write("write first number: ");
                 num1 = Convert.ToInt32(Console.ReadLine());
@@ -52,9 +53,7 @@ namespace Calculator
                 Console.WriteLine("Continue?: Y or N:");
             }
             while (Console.ReadLine().ToUpper() == "Y");
-
             Console.ReadKey();
-
         }
     }
 }
