@@ -54,5 +54,9 @@ namespace Calculator
 
             Console.ReadKey();
         }
+        void Plus()
+        {
+            Console.WriteLine(num1 + num2);
+        }
     }
 }
