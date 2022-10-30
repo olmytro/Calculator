@@ -6,11 +6,37 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("This is the calculator");
+            Console.Write("write first number: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
 
+            Console.Write("write second numer: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("write operation: ");
+            string symbol = Console.ReadLine();
+
+            Console.WriteLine("This is the calculator");
+            Mathematic math = new Mathematic(num1, num2, symbol);
+
+
+            math.Back();
+
+            /*
             int num1 = 0;
             int num2 = 0;
             int result = 0;
+
+            Console.Write("write first number: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("write second numer: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("write operation: ");
+            string symbol = Console.ReadLine();
+
+            
+            
             do
             {   
                 Console.Write("write first number: ");
@@ -51,6 +77,7 @@ namespace Calculator
                 Console.WriteLine("Continue?: Y or N:");
             }
             while (Console.ReadLine().ToUpper() == "Y");
+            */
 
             Console.ReadKey();
         }

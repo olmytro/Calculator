@@ -8,13 +8,26 @@ namespace Calculator
     {
         public int num1;
         public int num2;
-        public string result;
+        public string symbol;
 
-        public Mathematic(int anum1, int anum2, string aresult)
+        public Mathematic(int aNum1, int aNum2, string aSymbol)
         {
-            num1 = anum1;
-            num2 = anum2;
-            result = aresult;
+            num1 = aNum1;
+            num2 = aNum2;
+            symbol = aSymbol;
+        }
+
+        public void Back()
+        {
+            switch (symbol)
+            {
+                case "+":
+                    Console.WriteLine("summ");
+                    break;
+                case "-":
+                    Console.WriteLine("substract");
+                    break;
+            }
         }
     }
 }
