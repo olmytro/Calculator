@@ -23,22 +23,22 @@ namespace Calculator
             switch (symbol)
             {
                 case "+":
-                    Console.WriteLine("Summ");
+                    Console.WriteLine("Summ:");
                     result = num1 + num2;
                     Console.WriteLine("the result is: " + num1 + " + " + num2 + " = " + result );
                     break;
                 case "-":
-                    Console.WriteLine("Subtract");
+                    Console.WriteLine("Subtract:");
                     result = num1 - num2;
                     Console.WriteLine("the result is: " + num1 + " - " + num2 + " = " + result);
                     break;
                 case "*":
-                    Console.WriteLine("Multiply");
+                    Console.WriteLine("Multiply:");
                     result = num1 * num2;
                     Console.WriteLine("the result is: " + num1 + " * " + num2 + " = " + result);
                     break;
                 case "/":
-                    Console.WriteLine("divide");
+                    Console.WriteLine("divide:");
                     result = num1 / num2;
                     Console.WriteLine("the result is: " + num1 + " / " + num2 + " = " + result);
                     break;
