@@ -4,45 +4,36 @@ using System.Text;
 
 namespace Calculator
 {
-    class Mathematic
+    static class Mathematic
     {
-        public int num1;
-        public int num2;
-        public string symbol;
-        public int result;
-
-        public Mathematic(int aNum1, int aNum2, string aSymbol)
+        public static void Add(int a, int b)
         {
-            num1 = aNum1;
-            num2 = aNum2;
-            symbol = aSymbol;
+            int result = a + b;
+            Console.WriteLine(a + " + " + b + " = " + result);
         }
 
-        public void Back()
+        public static void Subtract(int a, int b)
         {
-            switch (symbol)
+            int result = a - b;
+            Console.WriteLine(a + " - " + b + " = " + result);
+        }
+
+        public static void Multiply(int a, int b)
+        {
+            int result = a * b;
+            Console.WriteLine(a + " * " + b + " = " + result);
+        }
+
+        public static void Divide(int a, int b)
+        {
+            if (a == 0 | b == 0)
+                Console.WriteLine("На ноль делить нельзя");
+            else
             {
-                case "+":
-                    Console.WriteLine("Summ:");
-                    result = num1 + num2;
-                    Console.WriteLine("the result is: " + num1 + " + " + num2 + " = " + result );
-                    break;
-                case "-":
-                    Console.WriteLine("Subtract:");
-                    result = num1 - num2;
-                    Console.WriteLine("the result is: " + num1 + " - " + num2 + " = " + result);
-                    break;
-                case "*":
-                    Console.WriteLine("Multiply:");
-                    result = num1 * num2;
-                    Console.WriteLine("the result is: " + num1 + " * " + num2 + " = " + result);
-                    break;
-                case "/":
-                    Console.WriteLine("divide:");
-                    result = num1 / num2;
-                    Console.WriteLine("the result is: " + num1 + " / " + num2 + " = " + result);
-                    break;
+                int result = a / b;
+                Console.WriteLine(a + " / " + b + " = " + result);
             }
         }
+        
     }
 }
