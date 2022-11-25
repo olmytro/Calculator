@@ -11,23 +11,20 @@ namespace Calculator
             int result = a + b;
             Console.WriteLine(a + " + " + b + " = " + result);
         }
-
         public static void Subtract(int a, int b)
         {
             int result = a - b;
             Console.WriteLine(a + " - " + b + " = " + result);
         }
-
         public static void Multiply(int a, int b)
         {
             int result = a * b;
             Console.WriteLine(a + " * " + b + " = " + result);
         }
-
         public static void Divide(int a, int b)
         {
             if (a == 0 | b == 0)
-                Console.WriteLine("На ноль делить нельзя");
+                Console.WriteLine("You can't divide by zero.");
             else
             {
                 int result = a / b;
